@@ -1,6 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+root{
+  background-color: rgb(18,24,38);
+}
 .App {
   text-align: center;
+  background-color: rgb(18,24,38);
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +24,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,6 +36,11 @@
 .App-link {
   color: #61dafb;
 }
+.hero-image {
+  max-height: 60vh;
+  width:100%;
+ object-fit:cover;
+ }
 
 @keyframes App-logo-spin {
   from {
