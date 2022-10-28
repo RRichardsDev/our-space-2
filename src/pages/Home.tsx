@@ -3,27 +3,18 @@ import { useEffect } from 'react';
 import HeroImage from '../HeroImage.jpg';
 import { HomeBody } from '../components/HomeBody';
 // import { HevcOutlined } from '@mui/icons-material';
+import { homepageAnimations } from '../animations/animationObjs/homepageAnimations';
 
 export function Home() {
   const handleClick = () => {
     console.log('click');
   }
   const handleScroll =  () =>{
-    const heroText = document.getElementById('homePageHeroText')
     if(window.scrollY < window.innerHeight*0.15){
-      heroText?.classList.remove('heroTextSmall');
-      heroText?.classList.add('heroTextToLarge');
-      
-      document.getElementById('subHeroText')?.classList.add('fadeIn');
-      document.getElementById('subHeroText')?.classList.remove('fadeOut');
+     homepageAnimations.reachedTheTop();
     }
     if(window.scrollY > window.innerHeight*0.15){
-      // console.log("apply style")
-      heroText?.classList.add('heroTextSmall');
-      heroText?.classList.remove('heroTextToLarge');
-
-      document.getElementById('subHeroText')?.classList.remove('fadeIn');
-      document.getElementById('subHeroText')?.classList.add('fadeOut');
+     homepageAnimations.leftTheTop();
 
     }
   };
