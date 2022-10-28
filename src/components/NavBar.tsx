@@ -7,7 +7,7 @@ interface NavBarProps {
 
 export default function NavBar({position, color}: NavBarProps) {
   
-  const navClasses = `${position} flex flex-wrap justify-between py-1 ${color}`;
+  const navClasses = `${position} flex flex-wrap justify-between py-1 z-2 ${color}`;
   // static contextType = ThemeContext;
 
   return (

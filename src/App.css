@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 root{
-  background-color: rgb(18,24,38);
+  background-color: #121826;
 }
 .App {
   text-align: center;
@@ -24,7 +24,7 @@ root{
 }
 
 .App-header {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +41,50 @@ root{
   width:100%;
  object-fit:cover;
  }
+
+.left-side-div{
+  -webkit-transition: all 5s;
+  -moz-transition: all 5s;
+    -o-transition: all 5s;
+       transition: all 5s;
+}
+.heroText{
+  font-size: 200px;
+  /* text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000; */
+}
+.subHeroText{
+  opacity: 0;
+}
+.heroTextToLarge {
+  animation: enlargeText 1s forwards ease-out;
+}
+.heroTextSmall{
+ animation: shrinkText 1s forwards ease-out;
+}
+.fadeIn {
+  animation-delay: 2s;
+  animation: fadeIn 2s forwards ease-out;
+}
+.fadeOut {
+  animation: fadeOut 0.5s forwards ease-out;
+}
+@keyframes fadeIn{
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+@keyframes fadeOut{
+  0% {opacity: 1}
+  100% {opacity: 0}
+}
+@keyframes shrinkText {
+  0% {font-size:200px; }
+  100% {font-size: 30px;}
+}
+@keyframes enlargeText {
+  0% {font-size: 30px;}
+  100% {font-size: 200px;}
+}
+
 
 @keyframes App-logo-spin {
   from {

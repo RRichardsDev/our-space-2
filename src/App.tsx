@@ -1,5 +1,5 @@
 import { useEffect, useState, createContext } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import { Home } from './pages/Home';
@@ -11,16 +11,24 @@ function App() {
   const [buttonStyles, setButtonStyles] = useState('bg-transparent');
   const position = 'sticky top-0 z-10';
   
-  const handleScroll = () => {
-    console.log(window.innerHeight*0.6)
-    if(window.scrollY >window.innerHeight*0.6-63){
+  const handleScroll = async () => {
+    // console.log(window.innerHeight)
+    if(window.scrollY > window.innerHeight*0.15){
       setNavColor( 'bg-gray-900' );
-      console.log(window.scrollY);
     }
-    if(window.scrollY < window.innerHeight*0.6-63){
+    if(window.scrollY < window.innerHeight*0.15){
       setNavColor( 'bg-transparent' );
       setButtonStyles(' ');
     }
+    /**
+    * @type {HTMLCanvasElement}
+    */
+    // const heroImage = document.getElementById('heroImage');
+    // console.log("heroImageHeight",heroImage?.offsetHeight);
+    // console.log("scrollY", window.scrollY);
+    // console.log("innerHeight", window.innerHeight);
+    
+    // if(window.scrollY > (heroImage?.clientHeight() window.innerHeight ) console.log(10)
   };
 
   useEffect(()=>{
@@ -30,13 +38,13 @@ function App() {
     <div className="App">
       <AppContext.Provider value={buttonStyles}>
         <NavBar position={position} color={navColor}/>
-        <Home />
+          <Home />
 
       </AppContext.Provider>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img id='heroImage'src={logo} className="App-logo -mt-72" alt="logo" /> */}
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Text I need to change later
         </p>
         <a
           className="App-link"
@@ -44,11 +52,12 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Click Me!
         </a>
         <p>1</p>
         <p>2</p>
         <p>3</p>
+        <p>4</p>
         <p>4</p>
         <p>5</p>
         <p>6</p>
