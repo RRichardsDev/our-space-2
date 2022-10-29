@@ -56,10 +56,10 @@ root{
   opacity: 0;
 }
 .heroTextToLarge {
-  animation: enlargeText 1s forwards ease-out;
+  animation: enlargeText 0.5s forwards ease-out;
 }
 .heroTextSmall{
- animation: shrinkText 1s forwards ease-out;
+ animation: shrinkText 0.5s forwards ease-out;
 }
 .fadeIn {
   animation-delay: 2s;
@@ -67,6 +67,20 @@ root{
 }
 .fadeOut {
   animation: fadeOut 0.5s forwards ease-out;
+}
+.fadeInNav {
+  animation: fadeInNav 0.2s forwards ease-out;
+}
+.fadeOutNav {
+  animation: fadeOutNav 0.2s forwards ease-out;
+}
+@keyframes fadeInNav{
+  0% {background-color: rgb( 0 0 0 0 )}
+  100% {background-color: rgb(18,24,38);}
+}
+@keyframes fadeOutNav{
+  0% {background-color: rgb(18,24,38);}
+  100% {background-color: rgb( 0 0 0 0 )}
 }
 @keyframes fadeIn{
   0% {opacity: 0}

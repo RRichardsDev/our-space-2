@@ -7,17 +7,17 @@ export const AppContext = createContext('');
 
 
 function App() {
-  const [navColor, setNavColor] = useState('bg-transparent');
+  // const [navColor, setNavColor] = useState('bg-transparent');
   const [buttonStyles, setButtonStyles] = useState('bg-transparent');
   const position = 'sticky top-0 z-10';
   
   const handleScroll = async () => {
     // console.log(window.innerHeight)
     if(window.scrollY > window.innerHeight*0.15){
-      setNavColor( 'bg-gray-900' );
+      // setNavColor( 'bg-gray-900' );
     }
     if(window.scrollY < window.innerHeight*0.15){
-      setNavColor( 'bg-transparent' );
+      // setNavColor( 'bg-transparent' );
       setButtonStyles(' ');
     }
     /**
@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={buttonStyles}>
-        <NavBar position={position} color={navColor}/>
+        <NavBar position={position} />
           <Home />
 
       </AppContext.Provider>
